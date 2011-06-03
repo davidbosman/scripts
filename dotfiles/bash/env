@@ -1,0 +1,9 @@
+export EDITOR="mate -w"
+export PATH=$PATH:~/bin
+
+export EDITOR='nano'
+if [[ -z "$SSH_CONNECTION" && $OSTYPE =~ ^darwin ]]; then
+export EDITOR='mate --wait'
+export TEXEDIT='mate -w -l %d "%s"'
+export LESSEDIT='mate -l %lm %f'
+fi

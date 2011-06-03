@@ -1,0 +1,13 @@
+<p>>For those wanting an automated reinstall/reconfigure:
+According to section 6.4.9 of the Debian Reference Manual, the following will save both the list of packages installed and their debconf configuration:
+Code:
+# dpkg √êget-selections √í*√ì >myselections # or use \*
+# debconf-get-selections > debconfsel.txt
+and the following will reinstall and reconfigure them:
+Code:
+# dselect update
+# debconf-set-selections < debconfsel.txt
+# dpkg √êset-selections <myselections
+# apt-get -u dselect-upgrade # or dselect install
+<br><br>[Source](http://www.locusmag.com/Perspectives/2010/07/cory-doctorow-what-i-do/) <a href="tag-tips.html">@tips</a>
+</p>

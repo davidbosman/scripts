@@ -1,0 +1,3 @@
+la voiture est bleue @car @couleur  
+Le tarin est long @physics
+

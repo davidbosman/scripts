@@ -1,0 +1,75 @@
+<html><head><title>Notes</title><meta http-equiv='Content-Type' content='text/html; charset=utf-8'></head><h3>linux</h3><p>comment afficher la version exacte de Ubuntu : "lsb_release -d" <a href="tag-unix.html">@unix</a> <a href="tag-linux.html">@linux</a> <a href="tag-shell.html">@shell</a> <a href="tag-tips.html">@tips</a>
+</p><p>	mkdir fullcircle ;
+	cd fullcircle ;
+	wget http://dl.fullcirclemagazine.org/issue0_en.pdf;
+	wget http://dl.fullcirclemagazine.org/issue35_en.pdf;
+	for i in `seq 1 34` ;
+	do wget http://dl.fullcirclemagazine.org/issue${i}_en.pdf ;
+	done #Download all full circle Magazines <a href="tag-unix.html">@unix</a> <a href="tag-linux.html">@linux</a> <a href="tag-wget.html">@wget</a> <a href="tag-tips.html">@tips</a>
+</p><p>	sudo sysv-rc-conf arrêter/démarrer services <a href="tag-linux.html">@linux</a> <a href="tag-tips.html">@tips</a>
+</p><p>sudo gedit /usr/share/gdm/autostart/LoginWindow/libcanberra-ready-sound.desktop <a href="tag-tips.html">@tips</a> <a href="tag-linux.html">@linux</a>
+</p><p>Dans le fichier, il faut chercher la ligne qui commence par Exec=/usr/bin/canberra-gtk-play et la commenter par un # devant. <a href="tag-linux.html">@linux</a> <a href="tag-gnome.html">@gnome</a> <a href="tag-sound.html">@sound</a> <a href="tag-tips.html">@tips</a>
+</p><p>	jimg http://davidbosman.fr/blog/wp-content/uploads/2010/ <a href="tag-linux.html">@linux</a> <a href="tag-tips.html">@tips</a> <a href="tag-autokey.html">@autokey</a>
+</p><p>	jzen <div align="center"><img src="http://davidbosman.fr/images/zen.png" alt="" zen="" style="border: 0px none;"></div> <a href="tag-linux.html">@linux</a> <a href="tag-tips.html">@tips</a>
+</p><p>	jjo output = system.exec_command("date '+%Y-%m%d-J-%A'.txt")
+	keyboard.send_keys(output) <a href="tag-linux.html">@linux</a> <a href="tag-tips.html">@tips</a>
+</p><p>	jjn output = system.exec_command("date '+%Y-%m%d-N-'")
+	keyboard.send_keys(output) <a href="tag-linux.html">@linux</a> <a href="tag-tips.html">@tips</a>
+</p><p>	jjw output = system.exec_command("date '+%Y-%m%d-W-'")
+	keyboard.send_keys(output) <a href="tag-linux.html">@linux</a>  <a href="tag-tips.html">@tips</a>
+</p><p>WiFI instant on on resume <a href="tag-linux.html">@linux</a> Add exit 0 just after Appl intro : 
+	sudo gedit /usr/lib/pm-utils/sleep.d/55NetworkManager <a href="tag-linux.html">@linux</a> <a href="tag-tips.html">@tips</a>
+</p><p>**ADD Helper** mode zen qui obscurci tout sauf la fenêtre actif **W+p** via compiz-fusion-plugins-extra  <a href="tag-linux.html">@linux</a> <a href="tag-compiz.html">@compiz</a> <a href="tag-writing.html">@writing</a> <a href="tag-zen.html">@zen</a>
+</p><p>Negatif: W+M (écran) W+N (window) <a href="tag-linux.html">@linux</a> <a href="tag-compiz.html">@compiz</a> <a href="tag-writing.html">@writing</a> <a href="tag-zen.html">@zen</a>
+</p><p>2010-0805-J-jeudi Installation de Zeitgeist <a href="tag-linux.html">@linux</a> <a href="tag-zen.html">@zen</a>
+</p><p>2010-0805-J-jeudi Vidéo d'intégration de Zeitgesit et Nautilus Empathy (celui que j'utilise sur Lucid). On sent immédiatement le potentiel énorme de cet outil à la fois pour retrouver des fichiers chronologiquement, mais aussi pour suivre son travail. L'intrfac est un peu abrupte te manque d'options au moins pour décider comment afifcher et quelle durée, mais elle est déjà fonctionnelle. J'aime ce truc. <a href="tag-linux.html">@linux</a> <a href="tag-zen.html">@zen</a>
+</p><p>## 2010-0806-N- install Empathy theme
+	sudo add-apt-repository ppa:elementaryart/ppa
+	sudo apt-get update
+	sudo apt-get install elementary-theme
+	## IMPORTANT ##
+	Murrine, Aurora, and Equniox required for this package.
+	Nautilus elementary is HIGHLY recommended http://danrabbit.deviantart.com/art/elementary-gtk-theme-83104033
+	## IMPORTANT ## <a href="tag-linux.html">@linux</a> <a href="tag-gnome.html">@gnome</a> <a href="tag-osx.html">@osx</a> <a href="tag-gui.html">@gui</a> <a href="tag-tips.html">@tips</a>
+</p><p>**Grille** pour déplacer les fenêtres et les redimenssioner <a href="tag-linux.html">@linux</a> <a href="tag-compiz.html">@compiz</a> <a href="tag-windows.html">@windows</a>
+</p><p>2010-0808-N-Autonomie: Plus de 6h avec l'écran à fond WiFiet BT coupés. sous Linux @ batterie <a href="tag-linux.html">@linux</a>
+</p><p>Poser la question à Stallman: selon lui, il y a combien d'utilisateurs qui sont équipés d'un système qui soit *réellement* libre, sans compromis soft ou hard? <a href="tag-stallman.html">@stallman</a> <a href="tag-religious.html">@religious</a> <a href="tag-freedom.html">@freedom</a> <a href="tag-linux.html">@linux</a>
+</p><p>Parlant de musique. Elle vient du Mac achetée sur iTunes Store et pourrie de DRM. √Ä présent, je goûte le plaisir de ne pas pouvoir écouter la musique légalement achetée où j'en ai envie, par exemple sur mon PC Linux <a href="tag-osx.html">@osx</a> <a href="tag-linux.html">@linux</a> <a href="tag-drm.html">@drm</a> <a href="tag-music.html">@music</a>
+</p><p>comment afficher la version exacte de Ubuntu : "lsb_release -d" <a href="tag-unix.html">@unix</a> <a href="tag-linux.html">@linux</a> <a href="tag-shell.html">@shell</a> <a href="tag-tips.html">@tips</a>
+</p><p>	mkdir fullcircle ;
+	cd fullcircle ;
+	wget http://dl.fullcirclemagazine.org/issue0_en.pdf;
+	wget http://dl.fullcirclemagazine.org/issue35_en.pdf;
+	for i in `seq 1 34` ;
+	do wget http://dl.fullcirclemagazine.org/issue${i}_en.pdf ;
+	done #Download all full circle Magazines <a href="tag-unix.html">@unix</a> <a href="tag-linux.html">@linux</a> <a href="tag-wget.html">@wget</a> <a href="tag-tips.html">@tips</a>
+</p><p>	sudo sysv-rc-conf arrêter/démarrer services <a href="tag-linux.html">@linux</a> <a href="tag-tips.html">@tips</a>
+</p><p>sudo gedit /usr/share/gdm/autostart/LoginWindow/libcanberra-ready-sound.desktop <a href="tag-tips.html">@tips</a> <a href="tag-linux.html">@linux</a>
+</p><p>Dans le fichier, il faut chercher la ligne qui commence par Exec=/usr/bin/canberra-gtk-play et la commenter par un # devant. <a href="tag-linux.html">@linux</a> <a href="tag-gnome.html">@gnome</a> <a href="tag-sound.html">@sound</a> <a href="tag-tips.html">@tips</a>
+</p><p>	jimg http://davidbosman.fr/blog/wp-content/uploads/2010/ <a href="tag-linux.html">@linux</a> <a href="tag-tips.html">@tips</a>
+</p><p>	jzen <div align="center"><img src="http://davidbosman.fr/images/zen.png" alt="" zen="" style="border: 0px none;"></div> <a href="tag-linux.html">@linux</a> <a href="tag-tips.html">@tips</a>
+</p><p>	jjo output = system.exec_command("date '+%Y-%m%d-J-%A'.txt")
+	keyboard.send_keys(output) <a href="tag-linux.html">@linux</a> <a href="tag-tips.html">@tips</a>
+</p><p>	jjn output = system.exec_command("date '+%Y-%m%d-N-'")
+	keyboard.send_keys(output) <a href="tag-linux.html">@linux</a> <a href="tag-tips.html">@tips</a>
+</p><p>	jjw output = system.exec_command("date '+%Y-%m%d-W-'")
+	keyboard.send_keys(output) <a href="tag-linux.html">@linux</a>  <a href="tag-tips.html">@tips</a>
+</p><p>WiFI instant on on resume <a href="tag-linux.html">@linux</a> Add exit 0 just after Appl intro : 
+	sudo gedit /usr/lib/pm-utils/sleep.d/55NetworkManager <a href="tag-linux.html">@linux</a> <a href="tag-tips.html">@tips</a>
+</p><p>**ADD Helper** mode zen qui obscurci tout sauf la fenêtre actif **W+p** via compiz-fusion-plugins-extra  <a href="tag-linux.html">@linux</a> <a href="tag-compiz.html">@compiz</a> <a href="tag-writing.html">@writing</a> <a href="tag-zen.html">@zen</a>
+</p><p>Negatif: W+M (écran) W+N (window) <a href="tag-linux.html">@linux</a> <a href="tag-compiz.html">@compiz</a> <a href="tag-writing.html">@writing</a> <a href="tag-zen.html">@zen</a>
+</p><p>2010-0805-J-jeudi Installation de Zeitgeist <a href="tag-linux.html">@linux</a> <a href="tag-zen.html">@zen</a>
+</p><p>2010-0805-J-jeudi Vidéo d'intégration de Zeitgesit et Nautilus Empathy (celui que j'utilise sur Lucid). On sent immédiatement le potentiel énorme de cet outil à la fois pour retrouver des fichiers chronologiquement, mais aussi pour suivre son travail. L'intrfac est un peu abrupte te manque d'options au moins pour décider comment afifcher et quelle durée, mais elle est déjà fonctionnelle. J'aime ce truc. <a href="tag-linux.html">@linux</a> <a href="tag-zen.html">@zen</a>
+</p><p>## 2010-0806-N- install Empathy theme
+	sudo add-apt-repository ppa:elementaryart/ppa
+	sudo apt-get update
+	sudo apt-get install elementary-theme
+	## IMPORTANT ##
+	Murrine, Aurora, and Equniox required for this package.
+	Nautilus elementary is HIGHLY recommended http://danrabbit.deviantart.com/art/elementary-gtk-theme-83104033
+	## IMPORTANT ## <a href="tag-linux.html">@linux</a> <a href="tag-gnome.html">@gnome</a> <a href="tag-osx.html">@osx</a> <a href="tag-gui.html">@gui</a> <a href="tag-tips.html">@tips</a>
+</p><p>**Grille** pour déplacer les fenêtres et les redimenssioner <a href="tag-linux.html">@linux</a> <a href="tag-compiz.html">@compiz</a> <a href="tag-windows.html">@windows</a>
+</p><p>2010-0808-N-Autonomie: Plus de 6h avec l'écran à fond WiFiet BT coupés. sous Linux @ batterie <a href="tag-linux.html">@linux</a>
+</p><p>Poser la question à Stallman: selon lui, il y a combien d'utilisateurs qui sont équipés d'un système qui soit *réellement* libre, sans compromis soft ou hard? <a href="tag-stallman.html">@stallman</a> <a href="tag-religious.html">@religious</a> <a href="tag-freedom.html">@freedom</a> <a href="tag-linux.html">@linux</a>
+</p><p>Parlant de musique. Elle vient du Mac achetée sur iTunes Store et pourrie de DRM. √Ä présent, je goûte le plaisir de ne pas pouvoir écouter la musique légalement achetée où j'en ai envie, par exemple sur mon PC Linux <a href="tag-osx.html">@osx</a> <a href="tag-linux.html">@linux</a> <a href="tag-drm.html">@drm</a> <a href="tag-music.html">@music</a>
+</p>

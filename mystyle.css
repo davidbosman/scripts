@@ -1,0 +1,33 @@
+body {
+	font-family: "Courier New", Menlo, Arial;
+	background-image: url('../../Photos/wallpapers/Wooden.png');
+	color:#393939;
+}
+h1, h2, h3   {
+    background-color:black;
+    color: silver;
+    padding:0.5em;
+}
+.post {
+	font-family: Ubuntu, "Palatino LT Std", Times, serif;
+	background-color:#F2F4F0;
+	width:670px;
+	padding:1em;
+	margin:1em;
+	line-height: 127%;
+	-webkit-box-shadow: 3px 3px 20px black;
+}
+blockquote {
+	font-family: "Courier New", Menlo, Monospace;
+	text-shadow: 0px 0.5px 0px #F1F4F4, 0px	0.5px 0px black;
+}
+strong {
+	background-color: #FFF12C;
+	font-weight:normal;
+}
+
+em {
+	font-style:italic;
+	text-decoration: underline;
+}
+
