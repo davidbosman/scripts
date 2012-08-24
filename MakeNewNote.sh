@@ -12,23 +12,24 @@
 # zenity
 #
 # Author:
-# David Bosman -- davidATdavidbosman.fr
+# David Bosman -- david@davidbosman.fr
 #
 # version:
 # 0.1
 # 2011, Feb 22.
 # Happy note-taking ;)
-        # Where should the notes be stored?
-        MYPATH=~/Dropbox/perso/Archives/
 
+        # Where should the notes be stored?
+        # MYPATH=/home/david/Documents/perso/Archives/
+	MYPATH=/home/david/
         Filedate=`date '+%Y-%m%d'`
         MYDATE=`date '+%A %d %B %Y'`
         ID=`date '+id_%Y%m%d%H%M%S'`
-        xclip -o >/tmp/tmpclip.txt
-        MYCLIP=`cat /tmp/tmpclip.txt`
+        xclip -o >/tmp/tmp.txt
+        MYCLIP=`cat /tmp/tmp.txt`
 
-		# if uname = Darwin -> 0SX
-		# if uname = Linux -> Linux ;)
+		# if uname = Darwin -> Mac
+		# if uname = Linux -> Linux
 
         #dialogbox to ad a title to the name of the note:
         if ret=`zenity --entry --title='Titre de votre note' --text='Les espaces seront convertis en "--" :'`

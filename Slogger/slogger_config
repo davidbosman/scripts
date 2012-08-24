@@ -1,0 +1,11 @@
+--- 
+twitter_tags: "@social @twitter"
+markdownify_rss_posts: false
+rss_feeds: [ http://davidbosman.fr/blog/feed/ ]
+
+twitter_users: [ david_bosman ]
+
+rss_tags: "@social @blogging"
+storage: icloud
+star_rss_posts: false
+save_images: true

@@ -1,0 +1,38 @@
+A tickler file is a concept i learned about from the gtd methodology
+a few years ago.  While all of it should be doable using a calendar,
+I somehow find the tickler nicer to work with.  But I couldn't find
+any good tools.  So I hacked up these scripts.
+
+Here is how I use this.  I have a folder (under gtd/) called 'tickler.
+In there, I have files name 01 through 31.  These have entries for that
+date, during the current month.  If I get an action item which I want to
+work on on the 13th, I add it to 13.  At the start of the day, I move
+the contents of that day's XX file into my gtd/next_actions.otl file.
+
+The tickler/ folder also has files named january through december.  If
+I get an action item I want to work on in September, I add it to the
+september file.  On September 1, I open the september file and move
+all items into 01-31 files (or next_actions.otl).  If I know in August
+that I will want to do something on September 17th, then I just prefix
+the item in the september file with '17: '.
+
+The tickler folder also contains a folder called 'repeating'.  In there,
+I keep files with repeating entries.  These take the following forms:
+
+D 15 Do something on the 15th
+A March 10 This happens anually on March 10
+W Monday 3pm 4pm Some meeting every monday from 3-4pm
+
+That is where the tools in this bzr tree come in.  Both scripts sit
+in my tickler/ folder.  On the first of every month, I run
+'update-repeating.sh'.  This inserts relevant entries for the current
+month into the right 01-31 files.  These entries start and end with
+'XXX'.  When update-repeating.sh starts, it removes any entries which
+start with 'XXX', but keeps other (hand-inserted) entries, so that it
+is safe to run update-repeating.sh repeatedly.  Note though that it
+can be annoying as, if today is the 13th, it will insert entries into
+01-12.
+
+There you go, full tickler functionality in two small scripts.  I've
+used many calender apps, but for my daily activities this is still
+my system of choice.

@@ -1,0 +1,28 @@
+;; no splashscreen
+(setq inhibit-startup-message t)
+
+;;????
+(setq auto-revert-mode t)
+
+;; Using Met-letter to switch buffers
+(global-set-key (kbd "M-j") 'previous-buffer)
+(global-set-key (kbd "M-k") 'next-buffer)
+(global-set-key (kbd "M-n") "~")
+
+;; visual line mode : do not cut words
+(add-hook 'text-mode-hook 'turn-on-visual-line-mode)
+
+;; default folder is in my Dropbox:
+(setq default-directory "~/Dropbox/perso/Archives/" )
+
+
+;; don't clutter folders with backups. Group them in a hidden folder in ~.
+(setq
+   backup-by-copying t      ; don't clobber symlinks
+   backup-directory-alist
+    '(("." . "~/.saves"))    ; don't litter my fs tree
+   delete-old-versions t
+   kept-new-versions 6
+   kept-old-versions 2
+   version-control t)       ; use versioned backups
+

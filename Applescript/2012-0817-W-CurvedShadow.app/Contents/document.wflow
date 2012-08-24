@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AMApplicationBuild</key>
+	<string>346</string>
+	<key>AMApplicationVersion</key>
+	<string>2.3</string>
+	<key>AMDocumentVersion</key>
+	<string>2</string>
+	<key>actions</key>
+	<array>
+		<dict>
+			<key>action</key>
+			<dict>
+				<key>AMAccepts</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Optional</key>
+					<true/>
+					<key>Types</key>
+					<array>
+						<string>com.apple.applescript.object</string>
+					</array>
+				</dict>
+				<key>AMActionVersion</key>
+				<string>1.0.2</string>
+				<key>AMApplication</key>
+				<array>
+					<string>Automator</string>
+				</array>
+				<key>AMParameterProperties</key>
+				<dict>
+					<key>source</key>
+					<dict/>
+				</dict>
+				<key>AMProvides</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Types</key>
+					<array>
+						<string>com.apple.applescript.object</string>
+					</array>
+				</dict>
+				<key>ActionBundlePath</key>
+				<string>/System/Library/Automator/Run AppleScript.action</string>
+				<key>ActionName</key>
+				<string>Exécuter un script AppleScript</string>
+				<key>ActionParameters</key>
+				<dict>
+					<key>source</key>
+					<string>--A script to run Acron's New Image With Curved Drop Shadow script by drag and drop--More infos @ http://davidbosman.fr/blog/2010/04/02/un-joli-ombrage-sous-les-photos-a-laide-dacorn-et-dune-once-dapplescript/--(c) David Bosman 2010. Do whatever you want with it--except hurting martians.on run {input, parameters}				tell application "Acorn"		open input				set thePath to POSIX path of input		--set thePath to POSIX file of input				set AppleScript's text item delimiters to "/"		set NewPath to (items 1 thru -2 of text items of thePath) as string				--Get file name, without the path		set NewName to (item -1 of text items of thePath) as string				--Concatenate NewPath and NewName, adding a "/" between and ".png" at the end (file 'll be saved as a png)		set theFileName to NewPath &amp; "/" &amp; NewName &amp; ".png"								--If the original image is wider than 450 pixels, resize the copy to 450		--change it to the desired width:		set DesiredWidth to 450		set w to width of document 1		if w &gt; DesiredWidth then tell document 1 to resize image width DesiredWidth				--Use Acorn's optional Curved Shadow filter		tell document 1 to do filter name "New Image With Curved Drop Shadow"				--Tell Acorn to do a PNG Web Export and save it at the same place as the original file, as a PNG:		--tell document 1 to web export in theFileName as PNG		tell document 1 to save as PNG in theFileName		--tell document 1 to web export in "/Users/david/Desktop/test3" as PNG				--quit Acorn without saving the file (no need to)		quit application "Acorn" without saving	end tell		return inputend run</string>
+				</dict>
+				<key>BundleIdentifier</key>
+				<string>com.apple.Automator.RunScript</string>
+				<key>CFBundleVersion</key>
+				<string>1.0.2</string>
+				<key>CanShowSelectedItemsWhenRun</key>
+				<false/>
+				<key>CanShowWhenRun</key>
+				<true/>
+				<key>Category</key>
+				<array>
+					<string>AMCategoryUtilities</string>
+				</array>
+				<key>Class Name</key>
+				<string>RunScriptAction</string>
+				<key>InputUUID</key>
+				<string>F43962BD-951E-4D35-A37B-63D7C1B309D8</string>
+				<key>Keywords</key>
+				<array>
+					<string>Exécuter</string>
+				</array>
+				<key>OutputUUID</key>
+				<string>C075ECA8-F004-4CE7-ACEE-E79628799350</string>
+				<key>UUID</key>
+				<string>C285A203-9E9E-4358-A14B-90469718DE04</string>
+				<key>UnlocalizedApplications</key>
+				<array>
+					<string>Automator</string>
+				</array>
+				<key>arguments</key>
+				<dict>
+					<key>0</key>
+					<dict>
+						<key>default value</key>
+						<string>on run {input, parameters}
+	
+	(* Your script goes here *)
+	
+	return input
+end run</string>
+						<key>name</key>
+						<string>source</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>0</string>
+					</dict>
+				</dict>
+				<key>isViewVisible</key>
+				<true/>
+				<key>location</key>
+				<string>464.000000:704.000000</string>
+				<key>nibPath</key>
+				<string>/System/Library/Automator/Run AppleScript.action/Contents/Resources/French.lproj/main.nib</string>
+			</dict>
+			<key>isViewVisible</key>
+			<true/>
+		</dict>
+	</array>
+	<key>connectors</key>
+	<dict/>
+	<key>workflowMetaData</key>
+	<dict>
+		<key>workflowTypeIdentifier</key>
+		<string>com.apple.Automator.application</string>
+	</dict>
+</dict>
+</plist>

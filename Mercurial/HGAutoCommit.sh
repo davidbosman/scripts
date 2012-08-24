@@ -1,6 +1,6 @@
 #!/bin/sh  
   
-REPOS="/Users/david/Documents/_projets/hibernatus"  
+REPOS="/Users/david/Dropbox/Arnaud"  
 DATE=`date '+%Y-%m%d %A @ %H:%M'`
 PC=`hostname`
   

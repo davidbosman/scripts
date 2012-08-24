@@ -1,27 +1,36 @@
+# Mac
+# alias linit="emacs ~/Dropbox/perso/scripts/emacs/init.el &"
+
+alias ea="mate -w ~/Dropbox/perso/scripts/dotfiles/bash/aliases"
+
 alias la="ls -alG"
 alias c="clear"
 alias h="history"
-alias lea="gedit ~/Dropbox/perso/scripts/dotfiles/bash/aliases &"
-alias linit="emacs ~/Dropbox/perso/emacs/init.el &"
-alias ea="mate -w ~/Dropbox/perso/scripts/dotfiles/bash/aliases"
 alias reload=" source ~/.bashrc"
 alias ..="cd .."
 alias gn="cd ~/Dropbox/perso/notes"
 alias fn="open ~/Dropbox/perso/Archives/."
 alias gs="cd ~/Dropbox/perso/scripts/dotfiles/bash && ls"
-alias td="perl ~/Dropbox/perso/scripts/tagcloud.pl /home/david/Dropbox/perso/notes/2010-notes.mdtxt"
-alias 216g="~/Dropbox/perso/scripts/notes216Go.sh"
-alias lweb="dropbox start | firefox | liferea | thunderbird &"
-alias kas="killall autokey-gtk ; autokey-gtk &"
-alias ld="(cd ~/Dropbox/perso/Archives && ls -d -- *-DRAFT-*)"
-alias hib="cd ~/Documents/_projets/hibernatus"
-alias tma="cd /Users/david/Dropbox/perso/Archives && mate ."
-alias bye="/Users/david/Dropbox/perso/scripts/Mercurial/HGAutoCommit.sh "
-alias myem="emacs ~/Dropbox/perso/emacs/init.el"
-alias xyem="open -a emacs.app ~/Dropbox/perso/emacs/init.el"
-alias journal='emacs -nw -f journal'
-alias hib="cd $HOME/Documents/_projets/fictions/Nouvelles/Hibernatus"
-alias hga="/Users/david/Dropbox/perso/scripts/autocommit.sh"
+alias log="~/Dropbox/perso/scripts/logme2DO.rb"
+
+# alias lea="gedit ~/Dropbox/perso/scripts/dotfiles/bash/aliases &"
+# alias td="perl ~/Dropbox/perso/scripts/tagcloud.pl /home/david/Dropbox/perso/notes/2010-notes.mdtxt"
+# alias 216g="~/Dropbox/perso/scripts/notes216Go.sh"
+# alias lweb="dropbox start | firefox | liferea | thunderbird &"
+# alias kas="killall autokey-gtk ; autokey-gtk &"
+# alias ld="(cd ~/Documents/perso/Archives && ls -d -- *-DRAFT-*)"
+# alias hib="cd ~/Documents/_projets/hibernatus"
+# alias tma="cd /Users/david/Dropbox/perso/Archives && mate ."
+# alias bye="/Users/david/Dropbox/perso/scripts/Mercurial/HGAutoCommit.sh "
+# alias myem="emacs ~/Dropbox/perso/emacs/init.el"
+# alias xyem="open -a emacs.app ~/Dropbox/perso/emacs/init.el"
+# alias journal='emacs -nw -f journal'
+# alias hib="cd $HOME/Documents/_projets/fictions/Nouvelles/Hibernatus"
+# alias hga="/Users/david/Dropbox/perso/scripts/autocommit.sh"
+# alias hpull="hg pull && hg update"
+# alias gar="cd ~/Documents/perso/Archives"
+# alias td='todo.sh -d /Users/david/Dropbox/perso/scripts/ginatrapani-todo/todo.cfg'
+# alias w='emacs -nw'
 
 function gjw {
 Filedate=`date '+%Y-%m%d'`
@@ -62,10 +71,6 @@ function ns {
 grep -r -i $1 ~/Dropbox/perso/Archives
 }
 
-function hgc {
-hg add && hg commit
-}
-
 function hgl {
 hg log
 }
@@ -86,8 +91,12 @@ function image-shadow () {
   # to xclip (sudo apt-get install xclip) in order to
   # get the full path in the clipboard.
   # "echo -e" to enable interpretatoin of escaped chars:
-  echo -e "\n![$out](http://davidbosman.fr/blog/wp-content/upload/2011/03/$out)\n" | xclip -selection clipboard
+  FTPFOLDER=`date '+%Y/%m'`
+  #echo -e "\n![$out](http://davidbosman.fr/blog/wp-content/upload/2011/03/$out)\n" | xclip -selection clipboard
+  echo -e "\n![$out](http://davidbosman.fr/blog/wp-content/upload/$FTPFOLDER/$out)\n" | xclip -selection clipboard
 }
+
+
 
 function mview (){
 	cat ~/Dropbox/perso/scripts/header.html  > /tmp/tmp.html;

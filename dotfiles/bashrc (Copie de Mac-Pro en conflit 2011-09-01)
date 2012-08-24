@@ -1,0 +1,4 @@
+source ~/Dropbox/perso/scripts/dotfiles/bash/env
+source ~/Dropbox/perso/scripts/dotfiles/bash/config
+source ~/Dropbox/perso/scripts/dotfiles/bash/aliases
+export PATH=$PATH:/home/david/Dropbox/perso/scripts

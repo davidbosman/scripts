@@ -1,0 +1,133 @@
+# Mac
+alias linit="emacs ~/Dropbox/perso/emacs/init.el &"
+alias ea="mate -w ~/Dropbox/perso/scripts/dotfiles/bash/aliases"
+
+
+alias la="ls -alG"
+alias c="clear"
+alias h="history"
+alias lea="gedit ~/Dropbox/perso/scripts/dotfiles/bash/aliases &"
+alias reload=" source ~/.bashrc"
+alias ..="cd .."
+alias gn="cd ~/Dropbox/perso/notes"
+alias fn="open ~/Dropbox/perso/Archives/."
+alias gs="cd ~/Dropbox/perso/scripts/dotfiles/bash && ls"
+alias td="perl ~/Dropbox/perso/scripts/tagcloud.pl /home/david/Dropbox/perso/notes/2010-notes.mdtxt"
+alias 216g="~/Dropbox/perso/scripts/notes216Go.sh"
+alias lweb="dropbox start | firefox | liferea | thunderbird &"
+alias kas="killall autokey-gtk ; autokey-gtk &"
+alias ld="(cd ~/Documents/perso/Archives && ls -d -- *-DRAFT-*)"
+alias hib="cd ~/Documents/_projets/hibernatus"
+alias tma="cd /Users/david/Dropbox/perso/Archives && mate ."
+alias bye="/Users/david/Dropbox/perso/scripts/Mercurial/HGAutoCommit.sh "
+alias myem="emacs ~/Dropbox/perso/emacs/init.el"
+alias xyem="open -a emacs.app ~/Dropbox/perso/emacs/init.el"
+alias journal='emacs -nw -f journal'
+alias hib="cd $HOME/Documents/_projets/fictions/Nouvelles/Hibernatus"
+alias hga="/Users/david/Dropbox/perso/scripts/autocommit.sh"
+alias hpull="hg pull && hg update"
+alias gar="cd ~/Documents/perso/Archives"
+alias td='todo.sh -d /Users/david/Dropbox/perso/scripts/ginatrapani-todo/todo.cfg'
+alias w='emacs -nw'
+
+function gjw {
+Filedate=`date '+%Y-%m%d'`
+gedit ~/Dropbox/perso/Archives/$Filedate-W-$1.markdown
+}
+
+function gjn {
+Filedate=`date '+%Y-%m%d'`
+echo "Title: " ~/Dropbox/perso/Archives/$Filedate-N-$1.markdown
+gedit ~/Dropbox/perso/Archives/$Filedate-N-$1.markdown
+}
+
+function tjn {
+Filedate=`date '+%Y-%m%d'`
+echo "Title: " ~/Dropbox/perso/Archives/$Filedate-N-$1.markdown
+mate -w ~/Dropbox/perso/Archives/$Filedate-N-$1.markdown
+}
+
+
+function gjo {
+Filedate=`date '+%Y-%m%d-J-%A'`
+gedit ~/Dropbox/perso/Archives/$Filedate.markdown
+}
+
+function gjwb {
+Filedate=`date '+%Y-%m%d'`
+echo "Title: " >~/Dropbox/perso/Archives/$Filedate-W-$1.blog.markdown;
+gedit ~/Dropbox/perso/Archives/$Filedate-W-$1.blog.markdown
+}
+
+function gjwd {
+Filedate=`date '+%Y-%m%d'`
+echo "Title: " >~/Dropbox/perso/Archives/$Filedate-W-DRAFT-$1.blog.markdown;
+gedit ~/Dropbox/perso/Archives/$Filedate-W-DRAFT-$1.blog.markdown
+}
+
+function ns {
+grep -r -i $1 ~/Dropbox/perso/Archives
+}
+
+function hgl {
+hg log
+}
+
+function image-shadow () {
+  # source: http://blog.bemoko.com/2009/07/01/add-shadow-and-border-to-images-with-imagemagick/
+  out=${1%.*}-web.${1#*.}
+  in=$1
+  echo "Converted file : $out"-r -i
+
+  convert $in -resize 450x450\> -bordercolor white -border 5 -bordercolor 'rgb(82,77,77)' -border 0.47 \( +clone -background black -shadow 60x5+6+6 \) \
+     +swap -background transparent -alpha background -layers merge +repage $out
+  # -resize 450x450\> réduit la taille de l'image si un des côtés est plus grand que 450 pixels.
+  # -bordercolor white -border 5: set border color and width
+  # \(...\): create the dropshadow
+  # -background transparent -alpha background : set the color of the background to transparency
+  # Now echo the file name plus path of the image on the blog
+  # to xclip (sudo apt-get install xclip) in order to
+  # get the full path in the clipboard.
+  # "echo -e" to enable interpretatoin of escaped chars:
+  echo -e "\n![$out](http://davidbosman.fr/blog/wp-content/upload/2011/03/$out)\n" | xclip -selection clipboard
+}
+
+function mview (){
+	cat ~/Dropbox/perso/scripts/header.html  > /tmp/tmp.html;
+	xclip -o > /tmp/tmp.markdown;
+	markdown --html4tags /tmp/tmp.markdown >> /tmp/tmp.html ;
+	cat ~/Dropbox/perso/scripts/footer.html  >> /tmp/tmp.html;
+	chromium-browser /tmp/tmp.html
+}
+
+function mknote () {
+        MYPATH=~/Dropbox/perso/Archives/
+        Filedate=`date '+%Y-%m%d'`
+        MYDATE=`date '+%A, le %d %B %Y'`
+        ID=`date '+id_%Y%m%d%H%M%S'`
+        xclip -o >/tmp/tmpclip.txt
+        MYCLIP=`cat /tmp/tmpclip.txt`
+	titre=`echo $1 | tr ' ' '-'`
+        echo "Title:  " > $MYPATH$Filedate-$titre.markdown
+        echo "Date: $MYDATE  " >> $MYPATH$Filedate-$1.markdown
+        echo "Source:  " >> $MYPATH$Filedate-$1.markdown
+        echo "Keywords: $ID,  " >> $MYPATH$Filedate-$1.markdown
+        echo "  " >> $MYPATH$Filedate-$1.markdown
+        echo ">$MYCLIP  " >> $MYPATH$Filedate-$1.markdown
+        nano $MYPATH$Filedate-$1.markdown
+}
+
+# search inside notes
+function sinf {
+	grep -wil -c $1 ~/Dropbox/perso/Archives/*.markdown | sort -r
+	grep -wil -c $1 ~/Dropbox/perso/Archives/*.mdtxt | sort -r
+	grep -wil -c $1 ~/Dropbox/perso/Archives/*.txt | sort -r
+	grep -wil -c $1 ~/Dropbox/perso/Archives/*.pdf | sort -r
+	grep -irn $1 ~/Dropbox/perso/Archives/ | sort -r
+}
+
+# search file name
+function sfn {
+	find ~/Dropbox/perso/Archives -iname "*$1*" -type f -print | sort -r
+}
+

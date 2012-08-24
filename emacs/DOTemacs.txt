@@ -1,0 +1,3 @@
+(add-to-list 'load-path "/home/david/Dropbox/perso/scripts/emacs/emacs.d")
+(add-to-list 'load-path "/home/david/Dropbox/perso/scripts/emacs/emacs.d/color-theme-6.6.0")
+(load-file "/home/david/Dropbox/perso/scripts/emacs/init.el")

@@ -8,14 +8,12 @@
 # Markdown
 # xclip: sudo apt-get install xclip
 #
-# davidATdavidbosman.fr
+# david@davidbosman.fr
 # v0.1 - 21/03/2011
 
-cat ~/Dropbox/perso/scripts/headerTux.html  > /tmp/tmp.html;
-xclip -o > /tmp/tmp.markdown;
-markdown --html4tag /tmp/tmp.markdown >> /tmp/tmp.html ;
-# pandoc -s /tmp/tmp.markdown -o /tmp/tmp.html ;
-# multimarkdown /tmp/tmp.markdown > /tmp/tmp2.html ;
+cat ~/Dropbox/perso/scripts/header.html  > /tmp/tmp.html;
+pbpaste > /tmp/tmp.markdown;
+~/Dropbox/perso/scripts/markdown.pl --html4tag /tmp/tmp.markdown >> /tmp/tmp.html ;
 cat ~/Dropbox/perso/scripts/footer.html  >> /tmp/tmp.html;
-firefox /tmp/tmp.html
+open /tmp/tmp.html
 
