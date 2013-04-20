@@ -1,3 +1,0 @@
-test @text
-ranger le placard
-ranger le placard due: 2011-08-27
